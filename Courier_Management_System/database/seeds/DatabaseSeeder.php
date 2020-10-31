@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // $this->call(UserTableSeeder::class);
+        // Call the seeder class here a dami data base to run it
+
+        //this measn ye class call=bolai ge the useseeder class ko jis ke 2nd attribute me bataya he keh ye class he
+            $this->call(Usersedder::class);
+            $this->call(RoleSeeder::class);
+
+
     }
 }

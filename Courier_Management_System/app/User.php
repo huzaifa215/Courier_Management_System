@@ -41,6 +41,7 @@ class User extends Authenticatable
 
     // relationship betwwen the user and the role
     public function role(){
-        return $this->belongsTo('app/Role');
+        return $this->belongsTo('app/Role','role_id');//tabel connect through the role id calles forign key
+
     }
 }
