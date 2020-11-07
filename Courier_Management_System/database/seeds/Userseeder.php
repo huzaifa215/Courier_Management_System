@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
-class Usersedder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,20 +17,22 @@ class Usersedder extends Seeder
         DB::table('users')->insert([
             'role_id'=>1,
             'branch_id'=>1,
-            'name'=>'Huzaifa khaldi',
+            'name'=>'Huzaifa khalid',
             'email'=>'hu75495@gmail.com',
             'username'=>'admin',
-            'password'=>bcrypt('password'),
+            'password'=>'03004276264'//bcrypt('password')
         ]);
 
         // 2nd tabel
         DB::table('users')->insert([
             'role_id'=>2,
             'branch_id'=>2,
-            'name'=>'hanzala khaldi',
+            'name'=>'hanzala khalid',
             'email'=>'hanzala75495@gmail.com',
             'username'=>'admin2',
-            'password'=>bcrypt('password'),
+            'password'=>'03004276264'
         ]);
-    }
+}
+
+
 }
