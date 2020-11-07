@@ -10,11 +10,14 @@ Route::get('/', function () {
 
 Auth::routes(['register'=> false]);
 
-Route::group(['as' => 'admin','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
+Route::get('dashboard','DashboardController@index' )->name('dashboard');
+
+
+Route::group(['as' => 'admin.','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
             Route::get('dashboard','DashboardController@index' )->name('dashboard');
 });
 
-Route::group(['as' => 'staff','prefix' => 'staff','namespace'=>'Staff','middleware'=>['auth','staff']], function () {
+Route::group(['as' => 'staff.','prefix' => 'staff','namespace'=>'Staff','middleware'=>['auth','staff']], function () {
     Route::get('dashboard','DashboardController@index' )->name('dashboard');
 });
 
